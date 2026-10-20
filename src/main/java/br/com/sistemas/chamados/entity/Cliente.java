@@ -1,6 +1,6 @@
 package br.com.sistemas.chamados.entity;
 
-import jakarta.persistence.Colunm;
+import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
@@ -12,7 +12,7 @@ import jakarta.persistence.Table;
 @Table(name="clientes")
 public class Cliente {
 
-    @id
+    @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
@@ -27,17 +27,18 @@ public class Cliente {
 
     public Cliente() {}
 
-    public Cliente(String nome, String email, String telefone) (
+    public Cliente(String nome, String email, String telefone) {
         this.nome = nome;
         this.email = email;
         this.telefone = telefone;
-    )
+
+    }
 
     public Long getId() {return id;}
     public String getNome() {return nome;}
-    public void setNome() {this.nome=nome;}
+    public void setNome(String nome) {this.nome=nome;}
     public String getEmail() {return email;}
-    public void setEmail() {this.email=email;}
+    public void setEmail(String email) {this.email=email;}
     public String getTelefone() {return telefone;}
-    public void setTelefone() {this.telefone=telefone;} 
+    public void setTelefone(String telefone) {this.telefone=telefone;} 
 }
