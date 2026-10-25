@@ -1,4 +1,3 @@
-// src/main/java/br/com/sistemas/chamados/entity/Chamado.java
 package br.com.sistemas.chamados.entity;
 
 import java.time.LocalDateTime;
