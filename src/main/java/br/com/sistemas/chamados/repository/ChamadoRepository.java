@@ -1,4 +1,3 @@
-// src/main/java/br/com/sistemas/chamados/repository/ChamadoRepository.java
 package br.com.sistemas.chamados.repository;
 
 import java.util.List;
