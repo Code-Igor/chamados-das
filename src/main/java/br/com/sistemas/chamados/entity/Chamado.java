@@ -28,6 +28,7 @@ public class Chamado {
     @Column(nullable = false, length = 30)
     private String status;
 
+    // para representar os relacionamentos entre as entidades 
     @ManyToOne(fetch = FetchType.LAZY, optional = false)
     @JoinColumn(name = "cliente_id", nullable = false)
     private Cliente cliente;
