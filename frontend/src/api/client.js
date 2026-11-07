@@ -1,4 +1,4 @@
-/** Centraliza as requisições e os erros da API Spring Boot. */
+/** centraliza as requisicoes da API Spring Boot. */
 const API_BASE = import.meta.env.DEV ? '/api' : '';
 
 export async function request(path, { method = 'GET', body, ...rest } = {}) {
