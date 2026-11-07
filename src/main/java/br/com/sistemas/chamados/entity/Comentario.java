@@ -20,6 +20,12 @@ public class Comentario {
     @Column(nullable = false, length = 120)
     private String autor;
 
+    @PrePersist
+    public void prePersist() {
+    if (data == null) {
+        data = LocalDateTime.now();
+        }
+    }
     // 
     @ManyToOne(fetch = FetchType.LAZY, optional = false)
     @JoinColumn(name = "chamado_id", nullable = false)
